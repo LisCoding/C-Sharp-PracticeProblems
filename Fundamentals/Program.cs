@@ -17,7 +17,8 @@ namespace Fundamentals
             }
             //DivisibleBy();
             //FizzBuzz();
-            FizzBazzII();
+            //FizzBazzII();
+            FizzBazzIII();
 
            
 
@@ -93,6 +94,38 @@ namespace Fundamentals
 
 
         //(Optional) Generate 10 random values and output the respective word, in relation to step three, for the generated values
+
+        static int RandomNumber()
+        {
+            Random number = new Random();
+            return number.Next();
+
+        }
+
+        static void FizzBazzIII()
+
+        {
+            int j = 0;
+            int i;
+            while (j < 10)
+            {
+                i = RandomNumber();
+                if (i % 15 == 0)
+                {
+                    Console.WriteLine("{0}- FizzBuzz", i);
+                }
+                else if (i % 5 == 0)
+                {
+                    Console.WriteLine("{0}- Buzz", i);
+                }
+                else if (i % 3 == 0)
+                {
+                    Console.WriteLine("{0} -Fizz", i);
+                }
+                j++;
+            }
+
+        }
 
     }
 }
