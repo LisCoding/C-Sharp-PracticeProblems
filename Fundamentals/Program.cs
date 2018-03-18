@@ -95,22 +95,24 @@ namespace Fundamentals
 
         //(Optional) Generate 10 random values and output the respective word, in relation to step three, for the generated values
 
-        static int RandomNumber()
-        {
-            Random number = new Random();
-            return number.Next();
+        //static int RandomNumber()
+        //{
+        //    Random number = new Random();
+        //    return number.Next();
 
-        }
+        //}
 
-        //TODO solve the mistery why we get same value in every iteration
+        
         static void FizzBazzIII()
 
         {
             int j = 0;
+            Random rand = new Random();
+ 
             int i;
             while (j < 10)
             {
-                i = RandomNumber();
+                i = rand.Next();
                 if (i % 15 == 0)
                 {
                     Console.WriteLine("{0}- FizzBuzz", i);
