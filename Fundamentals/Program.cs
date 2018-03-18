@@ -16,7 +16,8 @@ namespace Fundamentals
                // Console.WriteLine(i);
             }
             //DivisibleBy();
-            FizzBuzz();
+            //FizzBuzz();
+            FizzBazzII();
 
            
 
@@ -58,6 +59,37 @@ namespace Fundamentals
             }
         }
         //(Optional)If you used modulus in the last step, try doing the same without using it.Vice - versa for those who didn't! 
+        static bool IsMultiple(int number, int multipleNumber) // 3, 15 => true 
+        {
+            for (int i = 1; i <= multipleNumber/2; i++)
+            {
+                if( i * number == multipleNumber)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        static void FizzBazzII()
+        {
+            for (int i = 0; i < 101; i++)
+            {
+                if (IsMultiple(15, i))
+                {
+                    Console.WriteLine("{0} FizzBazz", i);
+                }
+                else if (IsMultiple(3, i))
+              
+                {
+                    Console.WriteLine("{0} Fizz", i);
+                }
+                else if (IsMultiple(5, i))
+                {
+                    Console.WriteLine("{0} Bazz", i);
+                }
+            }
+        }
 
 
         //(Optional) Generate 10 random values and output the respective word, in relation to step three, for the generated values
