@@ -102,6 +102,7 @@ namespace Fundamentals
 
         }
 
+        //TODO solve the mistery why we get same value in every iteration
         static void FizzBazzIII()
 
         {
